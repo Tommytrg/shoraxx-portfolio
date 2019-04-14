@@ -1,24 +1,32 @@
 import React, { Component } from 'react'
-import Wheel from "./Wheel"
-import NavBar from "./NavBar"
 
 class Page extends Component {
-  render () {
+  render() {
+
+    const legend = this.props.legend
+    ? (
+      <legend className="legend">
+        {this.props.legend}
+      </legend>
+    )
+    : undefined
+
     return (
-      <div className='border' id={this.props.id} ref={this.props.reference}>
-        <div className='main'>
-          <NavBar links={this.props.links} className="nav"/>
-          <div className='content'>
-            <div className={`text ${this.props["text-align"]}`}>
-              {this.props.children}
-            </div>
-            <Wheel className="wheel" src={this.props.wheel} alt="logo"/>           
-          </div>
-          <div className='media' />
-        </div>
+      <div className="section">
+        <nav className="nav">
+          <ul>
+            <li onClick={() => this.props.fullpageApi.moveTo(2)}>About me</li>
+            <li onClick={() => this.props.fullpageApi.moveTo(3)}>Projects</li>
+          </ul>
+        </nav>
+
+        <fieldset className="card">
+          {legend}
+          {this.props.children}
+        </fieldset>
       </div>
     )
   }
 }
 
-export default Page
+export { Page }

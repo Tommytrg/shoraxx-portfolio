@@ -4,13 +4,10 @@
   "private": true,
   "homepage": "https://Shoraxx.github.io/portfolio",
   "dependencies": {
-    "gh-pages": "^2.0.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
-    "react-scroll-to": "^2.0.1"
+    "@fullpage/react-fullpage": "^0.1.13",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
